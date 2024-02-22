@@ -1,0 +1,67 @@
+
+.img {
+  text-align: center;
+}
+
+.rodape {
+  text-align: justify;
+  background-color: rgb(9, 116, 255);
+}
+
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+h1{
+  color: rgb(14, 14, 107);
+}
+
+h5{
+  color: white;
+}
+
+.cor{
+  color: white;
+}
+
+.mt {
+  
+  background-color: #c5b8b8;
+  margin-left: 250px;
+}
+
+.mapadev {
+  color: black;
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+h2{
+  text-align: center;
+  font-size: 20px;
+}
+.blue{
+  background-color: rgb(70, 124, 241)
+  
+}

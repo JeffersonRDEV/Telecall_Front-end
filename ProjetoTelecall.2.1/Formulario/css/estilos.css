@@ -1,0 +1,188 @@
+
+
+/** Variables - colors **/
+:root {
+    /* Light */
+    --color-light-50: #f8fafc;
+
+    /* Dark */
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    /* Purple */
+    --color-purple-50: #5e60ec;
+    --color-purple-100: #3d55c2;
+    --color-purple-200: #5040e2;
+
+    /* Gradient */
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
+}
+
+/* Define a fonte, a imagem de fundo e a cor do texto do corpo da página */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(69, 72, 223), rgb(60, 38, 253));
+    
+}
+/* Define as propriedades da caixa que envolve o formulário */
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-30%);
+    background-color: white;
+    padding: 45px 50px;
+    border-radius: 5px;
+  
+}
+
+#container {
+    
+    background: var(--color-gradient);
+}
+
+/* Login Button */
+#login_button {
+    border: none;
+    background: var(--color-gradient);
+    padding: 7px;
+    border-radius: 3px;
+    color: var(--color-light-50);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#login_button:hover {
+    transform: scale(1.05);
+}
+
+/* Form Header */
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1 {
+    font-size: 40px;
+    position: relative;
+}
+
+#form_header h1::before {
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 3px;
+    background-color: var(--color-purple-50);
+    bottom: 6px;
+    border-radius: 5px;
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Define as propriedades do elemento que contém o campo de entrada e o rótulo */
+.inputBox{
+    position: relative;
+}
+
+/* Define as propriedades do campo de entrada */
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color: black;
+    font-size:13px;
+    width: 100%;
+}
+
+/* Define as propriedades do rótulo do campo de entrada quando o campo não está vazio */
+.inputUser:not(:placeholder-shown) ~ .labelInput {
+    top: -20px;
+    font-size: 15px;
+    color: rgb(235, 242, 248);
+}
+
+/* Define as propriedades do campo de entrada para a data de nascimento */
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    
+}
+/* Define as propriedades do botão de envio */
+.button:hover {
+    background-color: #0077cc;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #0095ff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    
+  }
+  /* Define as propriedades do rótulo do campo de entrada */
+  .labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+/* Define as propriedades do título da página */
+.titulo {
+  display: block;
+  margin: left;
+  border-radius: 40%;
+  background: fixed;
+}
+
+/* Dark Mode */
+.dark#login_form {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark-background 0.3s ease-in-out;
+}
+
+.dark#login_form .input-field input,
+.dark#login_form .input-field i {
+    color: var(--color-light-50);
+}
+
+@keyframes dark-to-light-background {
+    0% {
+        background-color:var(--color-dark-100);
+    }
+    100.0% {
+        background-color:var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark-background {
+    0% {
+        background-color:var(--color-light-50);
+    }
+    100.0% {
+        background-color:var(--color-dark-100); 
+    }
+}
+
+#mudarcor{
+    color: white;
+   
+}

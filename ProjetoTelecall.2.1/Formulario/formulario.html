@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres utilizada -->
+    <meta charset="UTF-8">
+    <!-- Define a compatibilidade do navegador -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Define a largura e escala inicial da viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o ícone da página na aba do navegador -->
+    <link rel="shorcut icon" href="../imagens/favicon-32x32.png" type="imagens">
+    <!-- Define o título da página -->
+    <title>Formulário de Cadastro</title>
+    <!-- Importa o arquivo de estilos CSS -->
+    <link href="../Formulario/css/estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../Formulario/js/jquery.js"></script>
+    <link rel="shorcut icon" href="../Login/imgs/favicon-32x32.png" >
+</head>
+
+<body>
+
+    <div class="box" id="cor">
+        <form id="login_form">
+            <main id="container"></main>
+            <br>
+            <!-- FORM HEADER -->
+            <div id="form_header">
+                <h1>Telecall</h1>
+                <i id="mode_icon" class="fa-solid fa-moon"></i>
+            </div>
+            <br><br><br>
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" minlength="15" maxlength="60" class="inputUser"
+                    onkeydown="maiuscula(this)" onkeypress="maiuscula(this)" onkeyup="maiuscula(this)" required>
+                <label for="nome" class="labelInput">Nome completo</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="text" class="inputUser" id="mat" onkeydown="maiuscula(this)" onkeypress="maiuscula(this)"
+                    onkeyup="maiuscula(this)" required>
+                <label for="Nome Materno" class="labelInput">Nome Materno:</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="Cpf" name="Cpf" class="inputUser" id="cpf" onkeydown="ajustaCpf(this)" onkeyup="ajustaCpf(this)"
+                    onkeydown="ajustaCpf(this)" onblur="validarCPF(this)" maxlength="14" required>
+                <label for="Cpf" class="labelInput">CPF</label>
+            </div>
+            <p>Sexo:</p>
+            <input type="radio" name="genero" value="feminino" required>
+            <label for="feminino">Feminino</label>
+            <br>
+            <input type="radio" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <br>
+            <input type="radio" name="genero" value="outro" required>
+            <label for="outro">Outro</label>
+            <br><br>
+            <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+            <input type="date" name="data_nascimento" id="data_nascimento"  maxlength="8" onkeydown="ajustaData(this)"
+                onkeyup="ajustaData(this)" onkeydown="ajustaData(this)" name="datemax" max="2005-01-01" required>
+            <br>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" class="inputUser" required>
+                <label for="email" class="labelInput">E-mail:</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="text" name="Telefone Celular" id="cel" class="inputUser" onkeydown="ajustaTelefone(this)"
+                    onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" maxlength="15" required>
+                <label for="telefone" class="labelInput">Telefone Celular:</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="text" name="Telefone Fixo" id="tel" class="inputUser" onkeydown="ajustaTelefone(this)"
+                    onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)" maxlength="14">
+                <label for="telefoneFixo" class="labelInput" id="labelTelefone">Telefone Fixo:</label>
+            </div>
+            <br>
+            <br>
+           <!-- Coloque aqui o código HTML fornecido -->
+    <div class="inputBox">
+        <label>CEP:</label>
+        <input type="text" id="cep" name="nome" class="inputUser">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="inputBox">
+        <input type="text" name="compl" id="endereco" class="inputUser" onkeydown="maiuscula(this)"
+               onkeypress="maiuscula(this)" onkeyup="maiuscula(this)" required>
+        <label for="endereco" class="labelInput">Endereço:</label>
+    </div>
+    <br>
+    <br>
+    <div class="inputBox">
+        <input type="text"  class="inputUser"  onkeypress="ajustaNumeros(this)" onkeyup="ajustaNumeros(this)"  required>
+        <label for="endereco" class="labelInput">Numero:</label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="inputBox">
+        <input type="text"  class="inputUser" onkeydown="maiuscula(this)"
+               onkeypress="maiuscula(this)" onkeyup="maiuscula(this)" required>
+        <label for="endereco" class="labelInput">Complemento:</label>
+    </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="text" name="Login" maxlength="6" id="login" class="inputUser" required>
+                <label for="login" class="labelInput">Login:</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="password" name="password" id="senha" minlength="8" maxlength="8" class="inputUser"
+                    required>
+                <label for="senha" class="labelInput">Senha:</label>
+            </div>
+            <br>
+            <br>
+            <div class="inputBox">
+                <input type="password" id="confirmar" name="password" minlength="8" maxlength="8" class="inputUser"
+                    required>
+                <label for="Senha" class="labelInput">Confirmar Senha:</label>
+            </div>
+            <br>
+            <br>
+            <div class="buttonBox">
+                <button value="Cadastrar-se" id="login_button"><a href="../Login/index.html" id="mudarcor">Cadastrar-se</a ></button>
+            </div>
+
+        </form>
+        </main>
+    </div>
+    <script src="../Formulario/js/formulario.js"></script>
+</body>
+
+
+</html>

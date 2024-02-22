@@ -1,0 +1,32 @@
+.container {
+    overflow: hidden; /* Limpa o float */
+  }
+  
+  .text {
+    float: left; /* Posiciona o texto à esquerda */
+    width: 60%; /* Ajuste a largura de acordo com suas necessidades */
+  }
+  
+  .image {
+    float: right; /* Posiciona a imagem à direita */
+    width: 40%; /* Ajuste a largura de acordo com suas necessidades */
+  }
+  
+  img {
+    max-width: 100%; /* Torna a imagem responsiva */
+    height: auto;
+  }
+  h5{
+    color: white;
+  }
+  .blue {
+    background-color: blue;
+  }
+
+  .aviso {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
